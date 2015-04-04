@@ -1,0 +1,202 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+body {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	font-family: Microsoft Yahei !important;
+}
+
+#hrefFm {
+	margin: 0 !important;
+}
+
+#wrapper {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	min-width: 1024px;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+#banner {
+	position: absolute;
+	width: 100%;
+	z-index: 4;
+	margin-top: 30px;
+}
+
+#heading {
+	/* max-width: 910px; */
+	width: 925px;	
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#heading a.default-logo {
+	height: 51px;
+	width: 51px;
+	background: #DC143C;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: Arial;
+	line-height: 51px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#heading div.site-title {
+	display: inline-block;
+}
+
+#heading span.site-name {
+	font-size: 14px;
+	font-family: Microsoft Yahei;
+	font-weight: bold;
+}
+
+#heading div.contact-phone {
+	float: right;
+	padding: 5px 0;
+}
+
+#heading .contact-phone div{
+	background: #DC143C;
+	color: #FFFFFF;
+	border-radius: 3px;
+	font-family: Microsoft Yahei;
+	font-size: 13px;
+	text-align: center;
+	padding: 2px;
+	width: 90px;
+	float: right;
+}
+
+#heading .contact-phone span {
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	float: right;
+	color: #828282;
+}
+
+#navigation {
+	/* background: #F7F7F7; */
+	height: 62px;
+	width: 100%;
+	
+	
+	ul {
+		background: transparent !important;
+		float: right;
+		
+		li {
+			border: none !important;
+			list-style: outside none none;
+			display: table-cell;
+			vertical-align: middle;
+			height: 62px;
+			
+			a {
+				display: block;
+				height: 36px !important;
+				text-decoration: none;
+				line-height: 36px;
+				border-right: 1px solid #f7f7f7;
+				
+				span {
+					display: inline-block;
+					margin-top: 0 !important;
+				}
+			}
+		}
+	}
+}
+
+#menubar {
+	padding: 0 30px;
+	
+	a.default-logo {
+		height: 62px;
+		width: 62px;
+		background: #DC143C;
+		color: #FFFFFF;
+		font-weight: bold;
+		font-family: Arial;
+		line-height: 62px;
+		text-align: center;
+		text-decoration: none;
+		display: block;
+	}
+	
+	span.default-title {
+		display: inline-block;
+		height: 62px;
+		line-height: 62px;
+		padding: 0 20px;
+		float: left;
+	}
+}
+
+/* #navigation li.selected a {
+	color: #FFFFFF;
+	background: #DC143C;
+}
+
+#navigation li img {
+	width: 48px;
+	height: 64px;
+}
+
+#navigation li.selected img {
+	margin-top: -32px;
+} 
+
+#navigation table {
+	margin: 0 auto;
+	border-color: #e8e8e8;
+	border-collapse: collapse;
+}
+
+#navigation td {
+	height: 100px;
+	width: 100px;
+	vertical-align: middle;
+}
+
+#navigation td a {
+	text-decoration: none;
+	color: #000000;
+}
+
+#navigation td.selected {
+	background: #DC143C;
+}
+
+#navigation td.selected a {
+	color: #FFFFFF;
+}
+
+#navigation td img {
+	width: 48px;
+	height: 64px;
+}
+
+#navigation td.selected img {
+	margin-top: -32px;
+}*/
+
+.bottom-logo {
+	background-image: url(../images/custom/logo.jpg);
+	background-repeat:  no-repeat;
+	background-size: 80px 80px;
+	width: 80px;
+	height: 80px;
+}
+
+.bottom-qr-code {
+	background-image: url(../images/custom/qr_code.png);
+	background-repeat:  no-repeat;
+	background-size: 80px 80px;
+	width: 80px;
+	height: 80px;
+}

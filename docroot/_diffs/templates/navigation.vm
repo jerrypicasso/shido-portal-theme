@@ -1,0 +1,126 @@
+<!--<nav class="$nav_css_class" id="navigation" role="navigation">
+	<ul aria-label="#language ("site-pages")" role="menubar">
+		#foreach ($nav_item in $nav_items)
+			#set ($nav_item_attr_has_popup="")
+			#set ($nav_item_attr_selected="")
+			#set ($nav_item_css_class = "")
+
+			#if ($nav_item.isSelected())
+				#set ($nav_item_attr_selected="aria-selected='true'")
+				#set ($nav_item_css_class = "selected")
+			#end
+
+			#if ($nav_item.hasChildren())
+				#set ($nav_item_attr_has_popup="aria-haspopup='true'")
+			#end
+
+			<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+				<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem">
+					#*====================old=====================*#
+					#*<span>$nav_item.icon() $nav_item.getName()</span>*#
+					#*====================new=====================*#
+					<span>
+						<div style="width:48px;height:32px;overflow:hidden;margin:0 auto;">
+						$nav_item.icon()
+						</div>
+						#foreach ($page_title in $nav_item.getName().split("/"))
+						$page_title<br/>
+						#end
+					</span>
+					#*=================================================*#
+				</a>
+		#end
+		</li>#*==========close tag at the end of the loop==========*#
+	</ul>
+</nav>
+
+
+<nav class="$nav_css_class" id="navigation" role="navigation">
+	<table id="menubar" aria-label="#language ("site-pages")" role="menubar" border="1" bordercolor="#e8e8e8">
+		<tr>
+		#foreach ($nav_item in $nav_items)
+			#set ($nav_item_attr_has_popup="")
+			#set ($nav_item_attr_selected="")
+			#set ($nav_item_css_class = "")
+
+			#if ($nav_item.isSelected())
+				#set ($nav_item_attr_selected="aria-selected='true'")
+				#set ($nav_item_css_class = "selected")
+			#end
+
+			#if ($nav_item.hasChildren())
+				#set ($nav_item_attr_has_popup="aria-haspopup='true'")
+			#end
+
+			<td class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+				<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem">
+					#*====================old=====================*#
+					#*<span>$nav_item.icon() $nav_item.getName()</span>*#
+					#*====================new=====================*#
+					<span>
+						<div style="width:48px;height:32px;overflow:hidden;margin:0 auto;">
+						$nav_item.icon()
+						</div>
+						#foreach ($page_title in $nav_item.getName().split("/"))
+						$page_title<br/>
+						#end
+					</span>
+					#*=================================================*#
+				</a>
+			</td>
+		#end
+		</tr>
+	</table>
+</nav>-->
+
+
+<nav class="$nav_css_class" id="navigation" role="navigation">
+	<div id="menubar" aria-label="#language ("site-pages")" role="menubar">
+		<table style="width:100%;">
+			<tr style="height: 62px;">
+				<td style="width: 62px;">
+					<a class="default-logo" href="#">SHIDO</a>
+				</td>
+				<td style="width: 16px;background: transparent;">
+				</td>
+				<td style="background: #fff;">
+					<span class="default-title">适度品牌整合设计策略</span>
+					<ul>
+					#foreach ($nav_item in $nav_items)
+						#set ($nav_item_attr_has_popup="")
+						#set ($nav_item_attr_selected="")
+						#set ($nav_item_css_class = "")
+			
+						#if ($nav_item.isSelected())
+							#set ($nav_item_attr_selected="aria-selected='true'")
+							#set ($nav_item_css_class = "selected")
+						#end
+			
+						#if ($nav_item.hasChildren())
+							#set ($nav_item_attr_has_popup="aria-haspopup='true'")
+						#end
+			
+						<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+							<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem">
+								#*====================old=====================*#
+								#*<span>$nav_item.icon() $nav_item.getName()</span>*#
+								#*====================new=====================*#
+								<span>
+									#foreach ($page_title in $nav_item.getName().split("/"))
+									$page_title<br/>
+									#end
+								</span>
+								#*=================================================*#
+							</a>
+						</li>
+					#end
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+</nav>
+
+<script>
+	Liferay.Data.NAV_LIST_SELECTOR = '#menubar';
+</script>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+	<meta charset="utf-8"/>
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class">
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+<div class="container-fluid" id="wrapper">
+	<header id="banner" role="banner">
+		<!--<div id="heading">
+			#*==================change h1 to div==================*#
+			<div class="site-title">
+				
+				#*=======================no imge logo===========================
+				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+				</a>
+				==============================================================*#
+				
+				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">SHIDO</a>
+
+				#if ($show_site_name)
+					<span class="site-name" title="#language_format ("go-to-x", [$site_name])">
+						$site_name
+					</span>
+				#end
+			</div>
+			
+			<div class="contact-phone">
+				<div>咨询服务电话</div><br/>
+				<span>400-8088-620</span>
+			</div>
+			
+			#*===========remove the second level title===========*#
+			#*<h2 class="page-title">*#
+			#*	<span>$the_title</span>*#
+			#*</h2>*#
+			#*===================================================*#
+		</div>-->
+		
+		#*=====================remove the login link=====================
+		#if (!$is_signed_in)
+			<a data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+		#end
+		===============================================================*#
+
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</header>
+
+	<div id="content">
+		#*================remove the breadcrumbs=================*#
+		#*<nav id="breadcrumbs">#breadcrumbs()</nav>*#
+		#*=======================================================*#
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		#*==========================================================
+		<p class="powered-by">
+			#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+		</p>
+		==========================================================*#
+		<section id="section7" style="height:400px;background-color:#ffffff;overflow:hidden;">
+			<div style="width:100%;height:40px;background-color:#dc143c;line-height:40px;text-align:left;">
+				<font style="color:#fff;font-weight:lighter;margin-left:240px;">恰如其分，张弛有道</font>
+			</div>
+			<div style="font-weight:lighter;margin:0 auto;width:855px;padding:20px 0px;">
+				<div style="display:inline-block;width:300px;text-align:left;float:left;margin:0 auto;">
+					<div>关于适度</div>
+					<div style="font-size:14px;">适度品牌整合设计与策略是一个强调品牌价值，以设计作为核心竞争力，协助客户实现品牌价值最大化的专业品牌服务机构。<br>
+					适度一直专注于协助客户创建或重塑品牌形象，已为近百个品牌实现了品牌形象的塑造及品牌发展。<br>
+					适度认为未来的十年，是品牌告诉发展的十年，唯有强势品牌方可在大品牌时代持续发展，创造盈利价值。</div>
+				</div>
+				<div style="display:inline-block;width:250px;text-align:left;float:left;margin:0 auto;">
+					<div>关于适度</div>
+					<div style="display:inline-block;font-size:14px;">
+						博世西门子<br>
+						淘宝网<br>
+						电信爱游戏<br>
+						皂河古镇<br>
+						克拉嗨谷<br>
+						博世西门子<br>
+						淘宝网<br>
+						电信爱游戏<br>
+						皂河古镇<br>
+						克拉嗨谷<br>
+					</div>
+					<div style="display:inline-block;font-size:14px;">
+						博世西门子<br>
+						淘宝网<br>
+						电信爱游戏<br>
+						皂河古镇<br>
+						克拉嗨谷<br>
+						博世西门子<br>
+						淘宝网<br>
+						电信爱游戏<br>
+						皂河古镇<br>
+						克拉嗨谷<br>
+					</div>
+					<div style="display:inline-block;font-size:14px;">
+						博世西门子<br>
+						淘宝网<br>
+						电信爱游戏<br>
+						皂河古镇<br>
+						克拉嗨谷<br>
+						博世西门子<br>
+						淘宝网<br>
+						电信爱游戏<br>
+						皂河古镇<br>
+						克拉嗨谷<br>
+					</div>
+				</div>
+				<div style="display:inline-block;width:100px;text-align:left;float:left;margin:0 auto;">
+					<div>关于适度</div>
+					<div style="font-size:14px;">+ 品牌标志<br>+ 品牌包装<br>+ 品牌空间<br>+ 品牌传播<br><br>了解我们的品牌设计系统<br><br>行业细分研究</div>
+				</div>
+				<div style="display:inline-block;width:205px;text-align:left;float:left;margin:0 auto;">
+					<div>关于适度</div>
+					<div style="display:inline-block;font-size:14px;float:left;">
+						食品餐饮<br>
+						电商O2O平台<br>
+						时尚美容<br>
+						零售连锁 店铺<br>
+						集团 中小企业<br>
+						<div class="bottom-qr-code"></div>
+					</div>
+					<div style="display:inline-block;float:left;margin-left:20px;font-size:14px;">
+						<div class="bottom-logo"></div>
+						<font style="font-size:10px;">SHIDO BRAND<br>INTERGRATED <br>DESIGN AND <br>STRATEGY<br>适度品牌整合设计<br>与策略</font>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section style="height:100px;">
+			<div style="border-top:1px solid #ddd;">
+				<div style="width:850px;margin:0 auto;text-align:left;font-family:Microsoft Yahei;font-weight:lighter;">
+					<div style="float:left;width:650px;font-size:10px;">
+						2006-2015适度品牌设计顾问有限公司<br>
+						本网站所有图片及资料均为本公司版权所有，对于任何形式的侵权行为，我们将保留一切追究法律责任的权利.All Rights Reserved
+					</div>
+					<div style="float:left;width:200px;font-size:10px;">
+						南京市庐山路158号嘉业国际城4号楼17层<br>
+						品牌顾问直线:18260080588
+					</div>
+				</div>
+			</div>
+		<section>
+	</footer>
+</div>
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+</body>
+
+</html>
