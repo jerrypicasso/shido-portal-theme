@@ -113,6 +113,12 @@ body {
 				}
 			}
 		}
+		
+		li:last-child {
+			a {
+				border-right: none;
+			}
+		}
 	}
 }
 
