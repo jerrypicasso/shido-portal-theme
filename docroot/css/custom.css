@@ -93,6 +93,7 @@ body {
 	ul {
 		background: transparent !important;
 		float: right;
+		margin: 0 40px;
 		
 		li {
 			border: none !important;
@@ -145,7 +146,12 @@ body {
 		height: 62px;
 		line-height: 62px;
 		padding: 0 20px;
-		float: left;
+	}
+	
+	@media screen and (max-width: 1920px) {
+		span.default-title {
+			display: none;
+		}
 	}
 }
 

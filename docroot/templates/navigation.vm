@@ -84,7 +84,8 @@
 				<td style="width: 16px;background: transparent;">
 				</td>
 				<td style="background: #fff;border-radius:4px;">
-					<span class="default-title">适度品牌整合设计策略</span>
+					<span class="default-title" style="float:left;">适度品牌整合设计策略</span>
+					<span class="default-title" style="float:right;">产品&服务驱动型品牌整合领导者</span>
 					<ul>
 					#foreach ($nav_item in $nav_items)
 						#set ($nav_item_attr_has_popup="")
