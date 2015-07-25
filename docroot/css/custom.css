@@ -5,6 +5,11 @@ body {
 	font-family: FZLTXHK !important;
 }
 
+@font-face {
+	font-family: 'FZLTXHK';
+	src:url('../fonts/FZLTXHK.TTF') format('truetype');/*non-IE*/
+}
+
 .portlet-borderless-container {
 	min-height: 10px !important;	
 }
