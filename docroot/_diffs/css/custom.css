@@ -155,11 +155,11 @@ body {
 	}
 }
 
-/* #navigation li.selected a {
-	color: #FFFFFF;
-	background: #DC143C;
+#navigation li.selected a {
+	color: #DC143C;
 }
 
+/*
 #navigation li img {
 	width: 48px;
 	height: 64px;
