@@ -21,7 +21,7 @@ body {
 #wrapper {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	min-width: 1260px;
+	min-width: 1080px;
 	max-width: 1920px;
 	margin: 0 auto;
 }
@@ -31,7 +31,8 @@ body {
 	width: 100%;
 	z-index: 4;
 	margin-top: 30px;
-	min-width: 1260px;
+	min-width: 1080px;
+	max-width: 1920px;
 }
 
 #heading {
