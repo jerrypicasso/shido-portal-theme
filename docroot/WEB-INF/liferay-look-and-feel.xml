@@ -5,5 +5,9 @@
 	<compatibility>
 		<version>6.2.1+</version>
 	</compatibility>
-	<theme id="shido-portal" name="Shido Portal" />
+	<theme id="shido-portal" name="Shido Portal" >
+		<settings>
+			<setting key="portlet-setup-show-borders-default" type="checkbox" value="false" configurable="true"/>
+		</settings>
+	</theme>
 </look-and-feel>
